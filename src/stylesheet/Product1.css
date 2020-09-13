@@ -1,0 +1,11 @@
+.product1{
+    background-color: white;
+    z-index: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+.starRating{
+    display: flex;
+    justify-content: start;
+}
