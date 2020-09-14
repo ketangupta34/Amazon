@@ -5,18 +5,21 @@ import amazon_logo from "../assets/amazon_logo.png";
 
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
 
 export default function Header() {
   return (
     <div className="header">
-
       <MenuIcon className="menuIcon" />
 
       <img className="headerLogo" src={amazon_logo} alt="amazon logo" />
 
       <div className="headerSearch">
-        <input type="text" className="searchInput" placeholder="Search in store..." />
+        <input
+          type="text"
+          className="searchInput"
+          placeholder="Search in store..."
+        />
         <SearchIcon className="searchIcon" />
       </div>
 
