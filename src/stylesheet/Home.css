@@ -1,3 +1,8 @@
+.home{
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #d5d5d5;
+}
 .homeBackground {
   width: 100%;
   z-index: -1;
@@ -5,10 +10,15 @@
 }
 
 .products{
-  margin-top: -370px;
+  margin-top: -320px;
 }
 
 .productRow{
   display: flex;
   z-index: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  margin-top: -400px;
 }
