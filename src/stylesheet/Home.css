@@ -1,7 +1,7 @@
-.home{
+.home {
   padding-left: 5%;
   padding-right: 5%;
-  background-color: #d5d5d5;
+  background-color: #e5e5e5;
 }
 .homeBackground {
   width: 100%;
@@ -9,16 +9,20 @@
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(4, 0, 0, 0));
 }
 
-.products{
+.products {
   margin-top: -320px;
 }
 
-.productRow{
+.productRow {
   display: flex;
   z-index: 1;
 }
 
 .carousel-control-prev-icon,
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   margin-top: -400px;
+}
+
+.carousel-indicators li {
+  visibility: hidden;
 }

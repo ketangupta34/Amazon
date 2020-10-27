@@ -1,0 +1,29 @@
+.sideNavigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22%;
+  height: 100%;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.open{
+  left: 0;
+  /* transform: translateX(100px); */
+  transition: left 1s;
+}
+
+.close{
+  left: -23%;
+  /* transform: translateX(-200px); */
+  transition: left 1s;
+}
+
+.sideNavNameHead{
+    height: 60px;
+    padding: 12px 0px 0px 40px ;
+    background-color: #233D53;
+    display: flex;
+    align-content: center;
+}

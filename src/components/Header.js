@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../stylesheet/header.css";
 
 import amazon_logo from "../assets/amazon_logo.png";
@@ -6,11 +6,31 @@ import amazon_logo from "../assets/amazon_logo.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import MenuIcon from "@material-ui/icons/Menu";
+import SideNavigation from "../components/SideNavigation";
+import TintBackground from "../components/TintBackground";
 
 export default function Header() {
+  const [sideBar, setSideBar] = useState(false);
+
+  const setBarState = () => {
+    setSideBar(!sideBar);
+  };
+
+  let menu;
+  if (sideBar) {
+    menu = (
+      <div>
+        <SideNavigation className="sideNavigation" button={setBarState} />
+        <TintBackground button={setBarState}/>
+      </div>
+    );
+  }
+
   return (
     <div className="header">
-      <MenuIcon className="menuIcon" />
+      <MenuIcon className="menuIcon" onClick={setBarState} />
+
+      {menu}
 
       <img className="headerLogo" src={amazon_logo} alt="amazon logo" />
 
