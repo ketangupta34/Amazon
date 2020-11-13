@@ -5,19 +5,19 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CloseIcon from "@material-ui/icons/Close";
 
 export default function sideNavigation(props) {
+  document.querySelector("body").style.overflow = props.act?"hidden":"";
+
   return (
-    <div className="sideNavigation">
+    <div className={props.act?"sideNavigation active":"sideNavigation"}>
       <div className="sideNavNameHead">
         <AccountCircleIcon style={{ color: "white" }} />
         <strong>
-          <p style={{ paddingLeft: "10px", color: "#ffffff" }}>Hello,sign in</p>
+          <p style={{ margin:0, padding: "0 10px", color: "#ffffff" }}>Hello,sign in</p>
         </strong>
         <CloseIcon
           style={{
             color: "white",
-            width: "80px",
-            marginLeft: "auto",
-            order: "2",
+            marginLeft: "auto"
           }}
           onClick={props.button}
         />

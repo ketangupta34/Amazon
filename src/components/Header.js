@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../stylesheet/header.css";
+import "../stylesheet/SideNavigation.css";
 
 import amazon_logo from "../assets/amazon_logo.png";
 
@@ -16,21 +17,14 @@ export default function Header() {
     setSideBar(!sideBar);
   };
 
-  let menu;
-  if (sideBar) {
-    menu = (
-      <div>
-        <SideNavigation className="sideNavigation" button={setBarState} />
-        <TintBackground button={setBarState}/>
-      </div>
-    );
-  }
 
   return (
     <div className="header">
       <MenuIcon className="menuIcon" onClick={setBarState} />
 
-      {menu}
+      <SideNavigation act={sideBar} button={setBarState} />
+      
+      <TintBackground act={sideBar} button={setBarState} />
 
       <img className="headerLogo" src={amazon_logo} alt="amazon logo" />
 

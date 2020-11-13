@@ -1,29 +1,29 @@
 .sideNavigation {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 22%;
-  height: 100%;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
   z-index: 10;
+  background: #fff;
+  transition: left .22s;
+}
+
+.category{
+  height: 100%;
   background-color: #fff;
 }
 
-.open{
+.sideNavigation.active{
   left: 0;
-  /* transform: translateX(100px); */
-  transition: left 1s;
 }
 
-.close{
-  left: -23%;
-  /* transform: translateX(-200px); */
-  transition: left 1s;
-}
-
-.sideNavNameHead{
-    height: 60px;
-    padding: 12px 0px 0px 40px ;
-    background-color: #233D53;
-    display: flex;
-    align-content: center;
+.sideNavNameHead {
+  height: 60px;
+  padding: 0 14px;
+  background-color: #233d53;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-content: center; */
 }
