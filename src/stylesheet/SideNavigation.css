@@ -6,7 +6,7 @@
   height: 100vh;
   z-index: 10;
   background: #fff;
-  transition: left .22s;
+  transition: left .3s;
 }
 
 .category{

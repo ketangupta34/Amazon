@@ -1,4 +1,4 @@
-.tintBackground {
+.tintBackgroundClose {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -6,11 +6,20 @@
   right: 0;
   width: 100%;
   height: 100%;
+  display: block;
   background: rgba(0, 0, 0, 0);
-  transition: background 0.2s;
+  transition: background 1s;
 }
 
-.tintBackground.active {
-  background: rgba(0, 0, 0, 0.5);
+.tintBackgroundActive {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  transition: background 1s;
 }
-

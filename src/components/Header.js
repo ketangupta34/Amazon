@@ -17,13 +17,12 @@ export default function Header() {
     setSideBar(!sideBar);
   };
 
-
   return (
     <div className="header">
       <MenuIcon className="menuIcon" onClick={setBarState} />
 
       <SideNavigation act={sideBar} button={setBarState} />
-      
+
       <TintBackground act={sideBar} button={setBarState} />
 
       <img className="headerLogo" src={amazon_logo} alt="amazon logo" />
