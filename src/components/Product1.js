@@ -8,7 +8,6 @@ function Product1(props) {
         <p>{props.title}</p>
         <p>{props.price}</p>
         <div className="starRating">
-          {console.log(props.rating)}
           {Array(props.rating)
             .fill()
             .map((_, i) => (
@@ -16,7 +15,7 @@ function Product1(props) {
             ))}
         </div>
       </div>
-      <img src={props.image} />
+      <img src={props.image} alt="not aval"/>
       <button>Add to basket</button>
     </div>
   );

@@ -3,17 +3,20 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 
-import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Header />
-    <Home />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route path="/ketan">
+        <Header />
+        <h1>KETAN GUPTA</h1>
+      </Route>
+      <Route path="/">
+        <Header />
+        <Home />
+      </Route>
+    </Switch>
+  </Router>,
   document.getElementById("root")
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
