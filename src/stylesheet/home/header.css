@@ -2,18 +2,26 @@
   margin: 0px;
   padding: 0px;
 }
+
 .header {
   min-width: 1000px;
   height: 60px;
   background-color: #131921;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   z-index: 8;
   top: 0;
 }
 
+.headerLogoDiv {
+  display: flex;
+  align-items: center;
+}
+
 .menuIcon {
+  cursor: pointer;
   color: white;
   margin-left: 15px;
 }
@@ -26,52 +34,71 @@
 
 .headerSearch {
   display: flex;
-  flex: 1;
   align-items: center;
 }
 
 .searchInput {
-  height: 14px;
-  padding: 15px;
+  outline: none;
+  height: 40px;
+  padding-left: 10px;
   border: none;
-  width: 100%;
+  width: 800px;
+  min-width: 600px;
+}
+
+.dropDown {
+  font-size: 18px;
+  outline: none !important;
+  height: 40px;
+  width: 55px;
+  border: none;
+  border-radius: 5px 0 0 5px;
 }
 
 .searchIcon {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  outline: none !important;
+  cursor: pointer;
+  height: 40px;
+  width: 45px;
   padding: 2px;
   background-color: #cd9042;
 }
 
 .headerNav {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navOption {
-  padding: 5px;
   color: white;
   display: flex;
   flex-direction: column;
-  margin: 0px 10px;
+  margin-right: 10px;
 }
 
 .navOptionLineOne {
-  font-size: 15px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 8px;
 }
 
 .navOptionLineTwo {
-  font-size: 16px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .optionBasket {
+  cursor: pointer;
   color: white;
   display: flex;
   align-items: center;
 }
+
 .basketCount {
-  margin: 0px 10px;
+  margin: 0 10px;
   font-size: 20px;
-  color: #cd9042;
   font-weight: 1000;
+  color: #e28f21;
 }

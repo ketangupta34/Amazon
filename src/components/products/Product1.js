@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheet/Product1.css";
+import "../../stylesheet/products/Product1.css";
 
 function Product1(props) {
   return (

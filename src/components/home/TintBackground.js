@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheet/tint.css";
+import "../../stylesheet/home/tint.css";
 
 export default function TintBackground(props) {
   return (

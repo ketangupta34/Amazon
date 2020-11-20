@@ -1,10 +1,10 @@
 import React from "react";
-import "../stylesheet/Home.css";
+import "../../stylesheet/home/Home.css";
 
-import Product1 from "../components/Product1";
-import HomeCarausel from "../components/HomeCarausel";
+import Product1 from "../../components/products/Product1";
+import HomeCarausel from "../../components/home/HomeCarausel";
 
-import oneplusImage from "../assets/OnePlus-7.jpg";
+import oneplusImage from "../../assets/OnePlus-7.jpg";
 
 export default function Home() {
   return (

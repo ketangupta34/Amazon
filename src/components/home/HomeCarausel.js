@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../stylesheet/Home.css";
+import "../../stylesheet/home/Home.css";
 
-import bg1 from "../assets/amazon_home_bg1.jpg";
-import bg2 from "../assets/amazon_home_bg2.jpg";
-import bg3 from "../assets/amazon_home_bg3.jpg";
+import bg1 from "../../assets/amazon_home_bg1.jpg";
+import bg2 from "../../assets/amazon_home_bg2.jpg";
+import bg3 from "../../assets/amazon_home_bg3.jpg";
 
 function HomeCarausel() {
   const [index, setIndex] = useState(0);

@@ -1,19 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
+import Header from "./components/home/Header";
+import Home from "./components/home/Home";
+import CheckOut from "./components/checkout/CheckOut";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 ReactDOM.render(
   <Router>
+    <Header />
+
     <Switch>
-      <Route path="/ketan">
-        <Header />
-        <h1>KETAN GUPTA</h1>
+      <Route path="/checkout">
+        <CheckOut />
       </Route>
       <Route path="/">
-        <Header />
         <Home />
       </Route>
     </Switch>

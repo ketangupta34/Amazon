@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheet/SideNavigation.css";
+import "../../stylesheet/home/SideNavigation.css";
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CloseIcon from "@material-ui/icons/Close";
