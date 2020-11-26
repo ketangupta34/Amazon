@@ -13,8 +13,11 @@ import TintBackground from "./TintBackground";
 
 import { Link } from "react-router-dom";
 
+import { useStateValue } from "../../StateProvider";
+
 export default function Header() {
   const [sideBar, setSideBar] = useState(false);
+  const [{ basket }, dispatch] = useStateValue();
 
   const setBarState = () => {
     setSideBar(!sideBar);
@@ -74,7 +77,9 @@ export default function Header() {
         <Link to="/checkout">
           <div className="optionBasket">
             <ShoppingCartIcon className="basketIcon" />
-            <span className="navOptionLineTwo basketCount">0</span>
+            <span className="navOptionLineTwo basketCount">
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>

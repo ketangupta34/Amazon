@@ -1,23 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Header from "./components/home/Header";
-import Home from "./components/home/Home";
-import CheckOut from "./components/checkout/CheckOut";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import App from "./App";
+
+import { StateProvider } from "./StateProvider";
+import reducer, { initialState } from "./reducer";
 
 ReactDOM.render(
-  <Router>
-    <Header />
-
-    <Switch>
-      <Route path="/checkout">
-        <CheckOut />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
-  </Router>,
+  <StateProvider initialState={initialState} reducer={reducer}>
+    <App />
+  </StateProvider>,
   document.getElementById("root")
 );
