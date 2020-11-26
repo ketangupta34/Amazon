@@ -3,12 +3,32 @@ import React from "react";
 import "../../stylesheet/checkout/cartItem.css";
 
 import oneplusImage from "../../assets/OnePlus-7.jpg";
+import amzFullfilled from "../../assets/A_Fullfilled.png";
 
-function CartItem() {
+function CartItem(props) {
   return (
     <div className="cartItem">
+      <input type="checkbox" className="checkbox" />
       <img src={oneplusImage} alt="image" className="cartItemImage" />
-      <span>lol</span>
+
+      <div className="info">
+        <div className="namePriceInfo">
+          <p className="cartItemTitle">
+            <strong>{props.title}</strong>
+          </p>
+          <p className="cartItemPrice">{props.price}</p>
+        </div>
+
+        <div className="faltuInfo">
+          <p>In stock</p>
+          <p>Eligible for FREE shipping</p>
+          <img src={amzFullfilled} alt="amazon full filled" />
+        </div>
+
+        <div className="buttonInfo">
+          <button className="cartDeleteButton">Delete item</button>
+        </div>
+      </div>
     </div>
   );
 }

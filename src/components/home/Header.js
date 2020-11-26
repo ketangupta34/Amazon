@@ -17,7 +17,7 @@ import { useStateValue } from "../../StateProvider";
 
 export default function Header() {
   const [sideBar, setSideBar] = useState(false);
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   const setBarState = () => {
     setSideBar(!sideBar);
@@ -37,7 +37,7 @@ export default function Header() {
       </div>
 
       <div className="headerSearch">
-        <button class="dropDown">
+        <button className="dropDown">
           All
           <ArrowDropDownIcon style={{ width: "20px" }} />
         </button>

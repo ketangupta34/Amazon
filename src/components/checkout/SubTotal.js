@@ -1,14 +1,17 @@
 import React from "react";
 import "../../stylesheet/checkout/subTotal.css";
 
+import PurchaseProtectionImage from "../../assets/Purchase_Protection.png";
+
 import CurrencyFormat from "react-currency-format";
 
 function SubTotal() {
   return (
     <div className="subTotal">
+      <img src={PurchaseProtectionImage} alt="purchase protection" />
       <CurrencyFormat
         renderText={(value) => (
-          <div>
+          <div className="subTotalPrice">
             <p>
               Subtotal(0 Items): <strong>{value}</strong>
             </p>
@@ -21,7 +24,7 @@ function SubTotal() {
         decimalScale={2}
         value={1000}
         displayType={"text"}
-        prefix={"Rs."}
+        prefix={"₹ "}
       />
 
       <button className="checkOutButton">Proceed to buy</button>
