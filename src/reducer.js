@@ -11,6 +11,19 @@ const reducer = (state, action) => {
         ...state,
         basket: [...state.basket, action.item],
       };
+
+    case "DELETE_FROM_BASKET":
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.if === action.id
+      );
+      let newBasket = [...state.basket];
+      newBasket.splice(index, 1);
+
+      return {
+        ...state,
+        basket: newBasket,
+      };
+
     default:
       return state;
   }

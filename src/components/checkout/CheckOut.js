@@ -19,7 +19,6 @@ function CheckOut() {
         <h1>
           <strong>Your shopping list</strong>
         </h1>
-
         {items}
       </div>
       <div>

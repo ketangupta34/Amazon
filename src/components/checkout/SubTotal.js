@@ -5,7 +5,18 @@ import PurchaseProtectionImage from "../../assets/Purchase_Protection.png";
 
 import CurrencyFormat from "react-currency-format";
 
+import { useStateValue } from "../../StateProvider";
+
 function SubTotal() {
+  const [{ basket }] = useStateValue();
+
+  var totalPrice = 0;
+  basket.map((item) => {
+    totalPrice += parseInt(item.price);
+  });
+
+  console.log("totalPrice = ",totalPrice);
+
   return (
     <div className="subTotal">
       <img src={PurchaseProtectionImage} alt="purchase protection" />
@@ -13,7 +24,7 @@ function SubTotal() {
         renderText={(value) => (
           <div className="subTotalPrice">
             <p>
-              Subtotal(0 Items): <strong>{value}</strong>
+              Subtotal({basket.length} Items): <strong>{value}</strong>
             </p>
             <small className="isAGift">
               <input type="checkbox" style={{ marginRight: "5px" }} />
@@ -22,7 +33,7 @@ function SubTotal() {
           </div>
         )}
         decimalScale={2}
-        value={1000}
+        value={totalPrice}
         displayType={"text"}
         prefix={"₹ "}
       />

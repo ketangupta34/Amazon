@@ -16,25 +16,25 @@ export default function Home() {
         <div className="productRow">
           <Product1
             title="This is new Text 1"
-            price="Rs. 1100"
+            price="1100"
             image={oneplusImage}
             rating={5}
           />
           <Product1
             title="This is new Text 2"
-            price="Rs. 1200"
+            price="1200"
             image={oneplusImage}
             rating={4}
           />
           <Product1
             title="This is new Text 3"
-            price="Rs. 1300"
+            price="300"
             image={oneplusImage}
             rating={3}
           />
           <Product1
             title="This is new Text 4"
-            price="Rs. 1400"
+            price="1400"
             image={oneplusImage}
             rating={2}
           />

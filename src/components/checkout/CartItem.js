@@ -5,7 +5,19 @@ import "../../stylesheet/checkout/cartItem.css";
 import oneplusImage from "../../assets/OnePlus-7.jpg";
 import amzFullfilled from "../../assets/A_Fullfilled.png";
 
+import { useStateValue } from "../../StateProvider";
+
 function CartItem(props) {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const deleteItem = () => {
+    console.log("in Here");
+    dispatch({
+      type: "DELETE_FROM_BASKET",
+      id: props.id
+    });
+  }
+
   return (
     <div className="cartItem">
       <input type="checkbox" className="checkbox" />
@@ -26,7 +38,7 @@ function CartItem(props) {
         </div>
 
         <div className="buttonInfo">
-          <button className="cartDeleteButton">Delete item</button>
+          <button className="cartDeleteButton" onClick={deleteItem}>Delete item</button>
         </div>
       </div>
     </div>
