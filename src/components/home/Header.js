@@ -52,13 +52,15 @@ export default function Header() {
       </div>
 
       <div className="headerNav">
-        <div className="navOption">
-          <span className="navOptionLineOne">Hello, sign in</span>
-          <span className="navOptionLineTwo">
-            Accounts & Lists
-            <ArrowDropDownIcon style={{ width: "20px" }} />
-          </span>
-        </div>
+        <Link to="/login">
+          <div className="navOption">
+            <span className="navOptionLineOne">Hello, sign in</span>
+            <span className="navOptionLineTwo">
+              Accounts & Lists
+              <ArrowDropDownIcon style={{ width: "20px" }} />
+            </span>
+          </div>
+        </Link>
         <div className="navOption">
           <span className="navOptionLineOne">Returns</span>
           <span className="navOptionLineTwo">
