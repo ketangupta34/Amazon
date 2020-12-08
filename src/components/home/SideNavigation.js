@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../stylesheet/home/SideNavigation.css";
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -16,9 +17,11 @@ export default function SideNavigation(props) {
       <div className="sideNavNameHead">
         <AccountCircleIcon style={{ color: "white" }} />
 
-        <h6 className="sideNavUser">
-          Hello, {user === null ? "sign In" : user.email}
-        </h6>
+        <Link to={!user && "/login"}>
+          <h6 className="sideNavUser">
+            Hello, {user ? user?.email : "sign In"}
+          </h6>
+        </Link>
 
         <CloseIcon
           style={{

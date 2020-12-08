@@ -15,12 +15,25 @@ import { Link } from "react-router-dom";
 
 import { useStateValue } from "../../StateProvider";
 
+import { auth } from "../../firebase";
+
 export default function Header() {
   const [sideBar, setSideBar] = useState(false);
-  const [{ basket, user }] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   const setBarState = () => {
     setSideBar(!sideBar);
+  };
+
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+      dispatch({
+        type: "SET_USER",
+        user: null,
+      });
+      console.log("logged out");
+    }
   };
 
   return (
@@ -52,17 +65,18 @@ export default function Header() {
       </div>
 
       <div className="headerNav">
-        <Link to="/login">
-          <div className="navOption">
+        <Link to={!user && "/login"}>
+          <div onClick={handleAuth} className="navOption">
             <span className="navOptionLineOne">
-              Hello, {user === null ? "sign In" : user.email}
+              Hello, {user ? user.email : "Guest"}
             </span>
             <span className="navOptionLineTwo">
-              Accounts & Lists
+              {user ? "Sign Out" : "Sign In"}
               <ArrowDropDownIcon style={{ width: "20px" }} />
             </span>
           </div>
         </Link>
+
         <div className="navOption">
           <span className="navOptionLineOne">Returns</span>
           <span className="navOptionLineTwo">
@@ -70,6 +84,7 @@ export default function Header() {
             <ArrowDropDownIcon style={{ width: "20px" }} />
           </span>
         </div>
+
         <div className="navOption">
           <span className="navOptionLineOne">Try</span>
           <span className="navOptionLineTwo">
