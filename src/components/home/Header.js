@@ -17,7 +17,7 @@ import { useStateValue } from "../../StateProvider";
 
 export default function Header() {
   const [sideBar, setSideBar] = useState(false);
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   const setBarState = () => {
     setSideBar(!sideBar);
@@ -54,7 +54,9 @@ export default function Header() {
       <div className="headerNav">
         <Link to="/login">
           <div className="navOption">
-            <span className="navOptionLineOne">Hello, sign in</span>
+            <span className="navOptionLineOne">
+              Hello, {user === null ? "sign In" : user.email}
+            </span>
             <span className="navOptionLineTwo">
               Accounts & Lists
               <ArrowDropDownIcon style={{ width: "20px" }} />

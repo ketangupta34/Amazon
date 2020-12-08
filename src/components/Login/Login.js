@@ -3,15 +3,41 @@ import "../../stylesheet/Login/login.css";
 
 import amazonLogo from "../../assets/amazon_logo_black.png";
 
-import { Link } from "react-router-dom";
+import { auth } from "../../firebase";
+
+import { Link, useHistory } from "react-router-dom";
 
 function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
+  const history = useHistory();
+
   const signIn = (e) => {
     e.preventDefault();
     console.log(email, password);
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => console.log(error.message));
+  };
+
+  const register = (e) => {
+    e.preventDefault();
+    console.log(email, password);
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        history.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -54,7 +80,9 @@ function Login() {
       </div>
 
       <p style={{ marginTop: "10px" }}>new to Amazon?</p>
-      <button className="createAccountButton">create a new Account</button>
+      <button className="createAccountButton" onClick={register}>
+        create a new Account
+      </button>
     </div>
   );
 }
