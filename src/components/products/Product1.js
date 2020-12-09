@@ -1,6 +1,8 @@
 import React from "react";
 import CurrencyFormat from "react-currency-format";
 
+import StarRating from "react-svg-star-rating";
+
 import "../../stylesheet/products/Product1.css";
 import { useStateValue } from "../../StateProvider";
 
@@ -36,11 +38,13 @@ function Product1(props) {
           prefix={"₹ "}
         />
         <div className="starRating">
-          {Array(props.rating)
-            .fill()
-            .map((_, i) => (
-              <p>🌟</p>
-            ))}
+          <StarRating
+            count="5"
+            size="20"
+            innerRadius="20"
+            initialRating={props.rating}
+            isReadOnly="true"
+          />
         </div>
       </div>
       <button className="addtocartbutton" onClick={addToBasket}>

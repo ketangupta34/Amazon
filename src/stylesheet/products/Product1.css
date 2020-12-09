@@ -11,7 +11,6 @@
 }
 
 .productInfo {
-  border: 1px solid black;
   width: 100%;
 }
 .productInfo * {
@@ -24,7 +23,6 @@
 }
 
 .productImage {
-  border: 1px solid black;
   width: 220px;
   height: 220px;
   display: flex;
@@ -33,7 +31,6 @@
 }
 
 .productImage img {
-  border: 1px solid black;
   max-height: 200px;
   max-width: 100%;
 }

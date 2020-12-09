@@ -15,7 +15,8 @@
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.1"
+    "react-scripts": "^4.0.1",
+    "react-svg-star-rating": "^1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
