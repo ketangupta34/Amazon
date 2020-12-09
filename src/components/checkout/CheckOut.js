@@ -13,7 +13,12 @@ function CheckOut() {
   const [{ basket }] = useStateValue();
 
   var items = basket.map((item, index) => (
-    <CartItem id={index} title={item.title} price={item.price} />
+    <CartItem
+      id={index}
+      title={item.title}
+      price={item.price}
+      image={item.image}
+    />
   ));
 
   if (basket.length === 0) {
@@ -36,9 +41,7 @@ function CheckOut() {
     return (
       <div className="checkOut">
         <div className="cartItems">
-          <h1>
-            <strong>Your shopping list</strong>
-          </h1>
+          <h1>Your shopping list</h1>
           {items}
         </div>
         <div>

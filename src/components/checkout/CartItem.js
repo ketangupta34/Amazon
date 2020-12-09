@@ -22,7 +22,7 @@ function CartItem(props) {
   return (
     <div className="cartItem">
       <div className="ImageDiv">
-        <img src={oneplusImage} alt="image" className="cartItemImage" />
+        <img src={props.image} alt="image" className="cartItemImage" />
       </div>
 
       <div className="info">

@@ -4,6 +4,7 @@ import Header from "./components/home/Header";
 import Home from "./components/home/Home";
 import CheckOut from "./components/checkout/CheckOut";
 import Login from "./components/Login/Login";
+import Payment from "./components/payment/Payment";
 
 import { auth } from "./firebase";
 
@@ -39,6 +40,10 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Payment />
           </Route>
           <Route path="/checkout">
             <Header />

@@ -6,16 +6,18 @@ import PurchaseProtectionImage from "../../assets/Purchase_Protection.png";
 import CurrencyFormat from "react-currency-format";
 
 import { useStateValue } from "../../StateProvider";
+import { useHistory } from "react-router-dom";
 
 function SubTotal() {
   const [{ basket }] = useStateValue();
+  const history = useHistory();
 
   var totalPrice = 0;
   basket.map((item) => {
     totalPrice += parseInt(item.price);
   });
 
-  console.log("totalPrice = ",totalPrice);
+  console.log("totalPrice = ", totalPrice);
 
   return (
     <div className="subTotal">
@@ -38,7 +40,12 @@ function SubTotal() {
         prefix={"₹ "}
       />
 
-      <button className="checkOutButton">Proceed to buy</button>
+      <button
+        onClick={(e) => history.push("/payment")}
+        className="checkOutButton"
+      >
+        Proceed to buy
+      </button>
     </div>
   );
 }
