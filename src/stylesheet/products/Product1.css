@@ -8,6 +8,7 @@
   margin: 10px;
   padding: 15px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .productInfo {
@@ -15,6 +16,17 @@
 }
 .productInfo * {
   margin: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 560;
+}
+
+.price {
+  color: red;
+  font-size: 18px;
+  font-weight: 555;
 }
 
 .starRating {

@@ -1,7 +1,12 @@
 .home {
+  width: 100%;
   background-color: #f1f1f1;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.homeCarausel {
+  width: 100%;
 }
 .homeBackground {
   width: 100%;
@@ -10,7 +15,8 @@
 }
 
 .products {
-  margin-top: -320px;
+  width: 100%;
+  margin-top: -300px;
 }
 
 .productRow {

@@ -15,31 +15,33 @@ function HomeCarausel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 homeBackground"
-          src={bg1}
-          alt="First slide"
-        />
-      </Carousel.Item>
+    <div style={{ width: "100%" }}>
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 homeBackground"
+            src={bg1}
+            alt="First slide"
+          />
+        </Carousel.Item>
 
-      <Carousel.Item>
-        <img
-          className="d-block w-100 homeBackground"
-          src={bg2}
-          alt="Second slide"
-        />
-      </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 homeBackground"
+            src={bg2}
+            alt="Second slide"
+          />
+        </Carousel.Item>
 
-      <Carousel.Item>
-        <img
-          className="d-block w-100  homeBackground"
-          src={bg3}
-          alt="Third slide"
-        />
-      </Carousel.Item>
-    </Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100  homeBackground"
+            src={bg3}
+            alt="Third slide"
+          />
+        </Carousel.Item>
+      </Carousel>
+    </div>
   );
 }
 

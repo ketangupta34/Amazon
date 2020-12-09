@@ -29,9 +29,9 @@ function Product1(props) {
       </div>
 
       <div className="productInfo">
-        <p>{props.title}</p>
+        <p className="title">{props.title}</p>
         <CurrencyFormat
-          renderText={(value) => <p style={{ color: "red" }}>{value}</p>}
+          renderText={(value) => <p className="price">{value}</p>}
           decimalScale={2}
           value={props.price}
           displayType={"text"}
