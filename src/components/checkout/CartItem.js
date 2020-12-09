@@ -1,4 +1,5 @@
 import React from "react";
+import CurrencyFormat from "react-currency-format";
 
 import "../../stylesheet/checkout/cartItem.css";
 
@@ -14,31 +15,45 @@ function CartItem(props) {
     console.log("in Here");
     dispatch({
       type: "DELETE_FROM_BASKET",
-      id: props.id
+      id: props.id,
     });
-  }
+  };
 
   return (
     <div className="cartItem">
-      <input type="checkbox" className="checkbox" />
-      <img src={oneplusImage} alt="image" className="cartItemImage" />
+      <div className="ImageDiv">
+        <img src={oneplusImage} alt="image" className="cartItemImage" />
+      </div>
 
       <div className="info">
         <div className="namePriceInfo">
           <p className="cartItemTitle">
             <strong>{props.title}</strong>
           </p>
-          <p className="cartItemPrice">{props.price}</p>
+
+          <CurrencyFormat
+            renderText={(value) => (
+              <p className="cartItemPrice">
+                <strong>{value}</strong>
+              </p>
+            )}
+            decimalScale={2}
+            value={props.price}
+            displayType={"text"}
+            prefix={"₹ "}
+          />
         </div>
 
         <div className="faltuInfo">
-          <p>In stock</p>
+          <p style={{ color: "green" }}>In stock</p>
           <p>Eligible for FREE shipping</p>
           <img src={amzFullfilled} alt="amazon full filled" />
         </div>
 
         <div className="buttonInfo">
-          <button className="cartDeleteButton" onClick={deleteItem}>Delete item</button>
+          <button className="cartDeleteButton" onClick={deleteItem}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

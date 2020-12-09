@@ -1,4 +1,6 @@
 import React from "react";
+import CurrencyFormat from "react-currency-format";
+
 import "../../stylesheet/products/Product1.css";
 import { useStateValue } from "../../StateProvider";
 
@@ -22,7 +24,17 @@ function Product1(props) {
     <div className="product1">
       <div className="productInfo">
         <p>{props.title}</p>
-        <p>{props.price}</p>
+        <CurrencyFormat
+          renderText={(value) => (
+            <p>
+              <strong>{value}</strong>
+            </p>
+          )}
+          decimalScale={2}
+          value={props.price}
+          displayType={"text"}
+          prefix={"₹ "}
+        />
         <div className="starRating">
           {Array(props.rating)
             .fill()
