@@ -22,14 +22,14 @@ function Product1(props) {
 
   return (
     <div className="product1">
+      <div className="productImage">
+        <img src={props.image} alt="not aval" />
+      </div>
+
       <div className="productInfo">
         <p>{props.title}</p>
         <CurrencyFormat
-          renderText={(value) => (
-            <p>
-              <strong>{value}</strong>
-            </p>
-          )}
+          renderText={(value) => <p style={{ color: "red" }}>{value}</p>}
           decimalScale={2}
           value={props.price}
           displayType={"text"}
@@ -43,8 +43,9 @@ function Product1(props) {
             ))}
         </div>
       </div>
-      <img src={props.image} alt="not aval" />
-      <button onClick={addToBasket}>Add to basket</button>
+      <button className="addtocartbutton" onClick={addToBasket}>
+        Add to basket
+      </button>
     </div>
   );
 }

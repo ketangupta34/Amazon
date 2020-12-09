@@ -6,12 +6,16 @@
   background-color: white;
   z-index: 1;
   margin: 10px;
-  padding: 20px;
-  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .productInfo {
+  border: 1px solid black;
   width: 100%;
+}
+.productInfo * {
+  margin: 0;
 }
 
 .starRating {
@@ -19,15 +23,25 @@
   justify-content: flex-start;
 }
 
-.product1 button {
+.productImage {
+  border: 1px solid black;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productImage img {
+  border: 1px solid black;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.addtocartbutton {
   background: #f0c14b;
   width: 150px;
   font-size: 17px;
-}
-
-.product1 img {
-  max-height: 200px;
-  width: 100%;
-  object-fit: contain;
-  margin: 10px;
+  border-radius: 3px;
+  margin: 5px;
 }

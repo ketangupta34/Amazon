@@ -5,12 +5,25 @@ import "../../stylesheet/home/SideNavigation.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import CloseIcon from "@material-ui/icons/Close";
 
+import { auth } from "../../firebase";
+
 import { useStateValue } from "../../StateProvider";
 
 export default function SideNavigation(props) {
-  const [{ user }] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   document.querySelector("body").style.overflow = props.act ? "hidden" : "";
+
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+      dispatch({
+        type: "SET_USER",
+        user: null,
+      });
+      console.log("logged out");
+    }
+  };
 
   return (
     <div className={props.act ? "sideNavigation active" : "sideNavigation"}>

@@ -38,6 +38,13 @@ export default function Home() {
             image={oneplusImage}
             rating={2}
           />
+          <Product1
+            title="This is new Text 5"
+            price="1500"
+            image={oneplusImage}
+            rating={3}
+          />
+          
         </div>
         <div className="productRow">
           <Product1 />
