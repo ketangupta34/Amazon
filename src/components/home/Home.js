@@ -20,24 +20,28 @@ export default function Home() {
       <div className="products">
         <div className="productRow">
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Aquamarine Green, 12GB RAM, 256GB Storage)"
             price="46000"
             image={oneplusblueImage}
             rating={5}
           />
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Lunar Silver 12GB RAM, 256GB Storage)"
             price="45000"
             image={oneplusredImage}
             rating={4}
           />
           <Product1
+            id="1"
             title="New Apple iPhone 12 (64GB) - Blue"
             price="80000"
             image={iphone12Image}
             rating={1}
           />
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}
@@ -46,18 +50,21 @@ export default function Home() {
         </div>
         <div className="productRow">
           <Product1
+            id="1"
             title="New Apple iPhone 12 (64GB) - Blue"
             price="80000"
             image={iphone12Image}
             rating={2}
           />
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}
             rating={3}
           />
           <Product1
+            id="1"
             title="OnePlus 7 (grey, 8GB RAM, 256GB Storage)"
             price="30000"
             image={oneplusImage}
@@ -66,12 +73,14 @@ export default function Home() {
         </div>
         <div className="productRow">
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}
             rating={2}
           />
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Lunar Silver 12GB RAM, 256GB Storage)"
             price="45000"
             image={oneplusredImage}
@@ -80,18 +89,21 @@ export default function Home() {
         </div>
         <div className="productRow">
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}
             rating={2}
           />
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Aquamarine Green, 12GB RAM, 256GB Storage)"
             price="46000"
             image={oneplusblueImage}
             rating={5}
           />
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Lunar Silver 12GB RAM, 256GB Storage)"
             price="45000"
             image={oneplusredImage}
@@ -100,24 +112,28 @@ export default function Home() {
         </div>
         <div className="productRow">
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Lunar Silver 12GB RAM, 256GB Storage)"
             price="45000"
             image={oneplusredImage}
             rating={4}
           />
           <Product1
+            id="1"
             title="OnePlus 8T 5G (Aquamarine Green, 12GB RAM, 256GB Storage)"
             price="46000"
             image={oneplusblueImage}
             rating={5}
           />
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}
             rating={2}
           />
           <Product1
+            id="1"
             title="Samsung Galaxy S10 Plus (Prism Black, 8GB RAM, 128GB Storage)"
             price="40000"
             image={samsungImage}

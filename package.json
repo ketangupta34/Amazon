@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "firebase": "^8.1.2",
     "react": "^16.14.0",
@@ -18,7 +19,8 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
-    "react-svg-star-rating": "^1.1.5"
+    "react-svg-star-rating": "^1.1.5",
+    "stripe": "^8.127.0"
   },
   "scripts": {
     "start": "react-scripts start",

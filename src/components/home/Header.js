@@ -77,13 +77,15 @@ export default function Header() {
           </div>
         </Link>
 
-        <div className="navOption">
-          <span className="navOptionLineOne">Returns</span>
-          <span className="navOptionLineTwo">
-            & Orders
-            <ArrowDropDownIcon style={{ width: "20px" }} />
-          </span>
-        </div>
+        <Link to="/orders">
+          <div className="navOption">
+            <span className="navOptionLineOne">Returns</span>
+            <span className="navOptionLineTwo">
+              & Orders
+              <ArrowDropDownIcon style={{ width: "20px" }} />
+            </span>
+          </div>
+        </Link>
 
         <div className="navOption">
           <span className="navOptionLineOne">Try</span>
