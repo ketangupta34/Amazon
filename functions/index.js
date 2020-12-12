@@ -1,4 +1,10 @@
 const functions = require("firebase-functions");
+
+const admin = require("firebase-admin");
+admin.initializeApp();
+
+// console.log("new log", admin.credential.applicationDefault());
+
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
@@ -16,6 +22,8 @@ app.get("/", (request, response) =>
 
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
+
+  console.log("payment recieved = ", total);
 
   const paymentIntent = await stripe.paymentIntents.create({
     amount: total,

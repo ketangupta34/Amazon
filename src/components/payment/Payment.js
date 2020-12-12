@@ -24,7 +24,7 @@ function Payment() {
 
   var items = basket.map((item, index) => (
     <CartItem
-      id={index}
+      id={item.id}
       title={item.title}
       price={item.price}
       image={item.image}
