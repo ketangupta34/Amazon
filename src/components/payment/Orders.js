@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import "../../stylesheet/payment/order.css";
 import { useStateValue } from "../../StateProvider";
+
+import OrdersItem from "../payment/OrdersItem";
+
 function Orders() {
   const { user } = useStateValue();
   const [orders, setOrders] = useState([]);
@@ -29,8 +32,16 @@ function Orders() {
 
   return (
     <div className="placedOrders">
-      <h1>order placed</h1>
-      <p>your order has been placed.</p>
+      <div className="ordersHeader">
+        <h3>Your Orders</h3>
+        <div>
+          <input type="text" placeholder="Search" className="orderSearch" />
+          <button className="orderSearchButton">search order</button>
+        </div>
+      </div>
+      <p className="noOfOrders">1 order placed</p>
+      <OrdersItem />
+      <OrdersItem />
     </div>
   );
 }

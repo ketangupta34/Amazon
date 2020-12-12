@@ -57,6 +57,7 @@ function App() {
             </Elements>
           </Route>
           <Route path="/orders">
+            <Header />
             <Orders />
           </Route>
           <Route path="/checkout">
