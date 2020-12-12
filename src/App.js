@@ -6,6 +6,7 @@ import CheckOut from "./components/checkout/CheckOut";
 import Login from "./components/Login/Login";
 import Payment from "./components/payment/Payment";
 import Orders from "./components/payment/Orders";
+import Footer from "./components/footer/Footer";
 
 import { auth } from "./firebase";
 
@@ -67,6 +68,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

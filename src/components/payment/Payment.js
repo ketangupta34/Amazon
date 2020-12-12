@@ -91,7 +91,7 @@ function Payment() {
 
   return (
     <div className="checkout">
-      <h1>Check Out</h1>
+      <h2>Review</h2>
 
       <div className="checkoutContent">
         <div className="contentDiv">

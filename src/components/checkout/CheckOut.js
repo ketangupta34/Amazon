@@ -44,7 +44,7 @@ function CheckOut() {
           <h1>Your shopping list</h1>
           {items}
         </div>
-        <div>
+        <div className="subTotalDiv">
           <SubTotal />
         </div>
       </div>
