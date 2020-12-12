@@ -1,10 +1,4 @@
 const functions = require("firebase-functions");
-
-const admin = require("firebase-admin");
-admin.initializeApp();
-
-// console.log("new log", admin.credential.applicationDefault());
-
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
@@ -18,6 +12,9 @@ app.use(express.json());
 
 app.get("/", (request, response) =>
   response.status(200).send("cloud function working")
+);
+app.get("/ketan", (request, response) =>
+  response.status(200).send("cloud function working ketan")
 );
 
 app.post("/payments/create", async (request, response) => {
