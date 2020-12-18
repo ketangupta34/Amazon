@@ -1,25 +1,28 @@
 import React from "react";
 import "../../stylesheet/payment/ordersItem.css";
+import moment from "moment";
 
 import oneplusImage from "../../assets/OnePlus-7.jpg";
 
-function OrdersItem() {
+function OrdersItem({ order }) {
   return (
     <div className="orderItem">
       <div className="orderHeader">
         <div className="innerDiv">
           <div className="orderHeaderContent">
             <p className="contentLineOne">ORDER PLACED</p>
-            <p className="contentLineTwo">friday 5, 2020</p>
+            <p className="contentLineTwo">
+              {moment.unix(order?.data.created).format("MMMM Do YYYY, h:mma")}
+            </p>
           </div>
           <div className="orderHeaderContent">
             <p className="contentLineOne">TOTAL</p>
-            <p className="contentLineTwo">&450000</p>
+            <p className="contentLineTwo">{order?.data.amount / 100}</p>
           </div>
         </div>
         <div className="orderHeaderContent">
           <p className="contentLineOne">ORDER NO</p>
-          <p className="contentLineTwo">eofibnt4hn392n30g</p>
+          <p className="contentLineTwo">{order?.id}</p>
         </div>
       </div>
 

@@ -26,6 +26,7 @@ const reducer = (state, action) => {
       };
 
     case "SET_USER":
+      console.log("Added USER in Reducer");
       return {
         ...state,
         user: action.user,

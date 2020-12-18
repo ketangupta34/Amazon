@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import "../../stylesheet/payment/order.css";
+import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 
 import OrdersItem from "../payment/OrdersItem";
 
 function Orders() {
-  const { user } = useStateValue();
+  const [{ user }] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     if (user) {
+      console.log("user abb aa gaya >>", user.email);
+
       db.collection("users")
         .doc(user?.uid)
         .collection("orders")
-        .orderBy("created", "desc")
         .onSnapshot((snapshot) =>
           setOrders(
             snapshot.docs.map((doc) => ({
@@ -23,12 +25,21 @@ function Orders() {
             }))
           )
         );
+      console.log("ORDERS >> ", orders);
     } else {
       setOrders([]);
+      console.log("user ki maa chud gayi");
     }
-  }, []);
+  }, [user]);
 
-  console.log(orders);
+  const orderitems =
+    orders?.length == 0 ? (
+      <p className="noItems">
+        You haven't placed any orders yet. Visit <Link to="/">Amazon.in</Link>
+      </p>
+    ) : (
+      orders.map((order) => <OrdersItem order={order} />)
+    );
 
   return (
     <div className="placedOrders">
@@ -39,9 +50,8 @@ function Orders() {
           <button className="orderSearchButton">search order</button>
         </div>
       </div>
-      <p className="noOfOrders">1 order placed</p>
-      <OrdersItem />
-      <OrdersItem />
+      <p className="noOfOrders">{orders?.length} order placed</p>
+      <div className="orderList">{orderitems}</div>
     </div>
   );
 }

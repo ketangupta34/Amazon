@@ -33,6 +33,8 @@ function App() {
           type: "SET_USER",
           user: authUser,
         });
+
+        console.log("USER ADDDED!!!!!");
       } else {
         //not loggedin
         dispatch({

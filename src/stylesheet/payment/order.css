@@ -40,3 +40,14 @@
   margin: 5px 15px;
   font-size: 16px;
 }
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noItems {
+  margin-top: 200px;
+}
